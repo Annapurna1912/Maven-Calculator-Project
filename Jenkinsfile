@@ -1,16 +1,18 @@
 pipeline {
-  agent any
+    agent any
 
-  stages {
-    stage( 'Checkout') {
-      git
-  'http://github.com/Annapurna1912/Maven-Calculator-Project.git'
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Annapurna1912/Maven-Calculator-Project.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
     }
-  }
-     stage('Build') {
-       steps {
-         sh 'mvn clean package'
-       }
-     }
 }
-}
+
