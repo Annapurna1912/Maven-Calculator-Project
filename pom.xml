@@ -11,8 +11,11 @@
 
     <name>calculator</name>
     <url>http://maven.apache.org</url>
-
-    <dependencies>
+         <properties>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+</properties>
+  <dependencies>
     <!-- JUnit 4 dependency -->
     <dependency>
         <groupId>junit</groupId>
