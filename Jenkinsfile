@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Annapurna1912/Maven-Calculator-Project.git'
+                git branch: 'main',
+                    url: 'https://github.com/Annapurna1912/Maven-Calculator-Project.git'
             }
         }
 
@@ -15,4 +16,5 @@ pipeline {
         }
     }
 }
+
 
